@@ -35,6 +35,4 @@ build/
 *.sqlite3
 
 # Dataset
-dataset/raw/
-dataset/processed/
-dataset/train/
+dataset/
