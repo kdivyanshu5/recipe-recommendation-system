@@ -1,20 +1,18 @@
 from fastapi import FastAPI
 
+from app.database.db import Base, engine
+from app.models.recipe import Recipe
+from app.models.interaction import Interaction
+from app.routes.recipe_routes import router as recipe_router
+
+Base.metadata.create_all(bind=engine)
+
 app = FastAPI(
-    title="Recipe Recommendation API",
+    title="FlavorGraph API",
     version="1.0.0"
 )
-
+app.include_router(recipe_router)
 
 @app.get("/")
-def home():
-    return {
-        "message": "Recipe Recommendation API is running!"
-    }
-
-
-@app.get("/health")
-def health():
-    return {
-        "status": "healthy"
-    }
+def root():
+    return {"message": "FlavorGraph API is running!"}
