@@ -273,8 +273,3 @@ recipe-recommendation-system/
 ```
 
 ---
-
-## License
-
-Released under the MIT License. The Food.com dataset is owned by its respective
-authors and used here for educational purposes only.
