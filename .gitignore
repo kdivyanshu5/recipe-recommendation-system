@@ -2,37 +2,29 @@
 __pycache__/
 *.py[cod]
 *.pyo
-*.pyd
 .venv/
 venv/
+.pytest_cache/
 
 # Environment
 .env
 
-# VS Code
-.vscode/
-
-# Node
+# Node / frontend
 node_modules/
+dist/
+.vite/
+
+# Editors
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
 
 # Logs
 *.log
 
-# Docker
-*.pid
-
-# macOS
-.DS_Store
-
-# Windows
-Thumbs.db
-
-# Build
-dist/
-build/
-
-# Database
-*.sqlite3
-
-# Dataset
+# Full dataset (downloaded separately, too large for git)
 dataset/
+*.sqlite3

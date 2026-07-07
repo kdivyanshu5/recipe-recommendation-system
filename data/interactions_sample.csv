@@ -1,0 +1,269 @@
+user_id,recipe_id,date,rating,review
+1,100007,2015-03-07,3,Decent but nothing special.
+1,100001,2016-04-21,3,"It was okay, needed more seasoning."
+1,100047,2018-02-23,5,"Loved this, will make again!"
+1,100017,2018-01-21,4,Delicious and simple.
+1,100015,2016-07-23,5,"Great flavors, highly recommend."
+1,100014,2015-11-23,5,"Loved this, will make again!"
+1,100008,2016-07-23,5,A new family favorite.
+1,100006,2015-07-29,4,A new family favorite.
+1,100034,2017-01-05,3,"It was okay, needed more seasoning."
+2,100038,2015-06-11,4,"Great flavors, highly recommend."
+2,100016,2017-01-10,5,Delicious and simple.
+2,100002,2015-05-23,5,Delicious and simple.
+2,100046,2016-08-15,3,"It was okay, needed more seasoning."
+2,100029,2015-07-26,5,So easy and tasty.
+2,100034,2017-01-17,4,"Great flavors, highly recommend."
+3,100023,2015-05-27,5,Delicious and simple.
+3,100022,2017-12-29,5,So easy and tasty.
+3,100013,2017-08-04,5,So easy and tasty.
+3,100042,2018-02-14,4,Delicious and simple.
+3,100017,2015-04-25,4,A new family favorite.
+4,100002,2016-10-06,4,Perfect for a weeknight.
+4,100020,2017-03-21,4,"Great flavors, highly recommend."
+4,100025,2017-07-28,5,Delicious and simple.
+4,100017,2016-05-20,4,So easy and tasty.
+4,100004,2016-06-22,5,Perfect for a weeknight.
+5,100037,2015-08-13,3,"It was okay, needed more seasoning."
+5,100027,2017-05-14,4,So easy and tasty.
+5,100049,2017-02-20,5,"Great flavors, highly recommend."
+5,100025,2017-12-19,5,"Great flavors, highly recommend."
+5,100023,2015-01-24,4,Perfect for a weeknight.
+5,100014,2018-01-04,5,"Loved this, will make again!"
+5,100008,2016-11-27,5,Delicious and simple.
+5,100032,2015-11-20,4,"Great flavors, highly recommend."
+5,100031,2016-06-23,5,Delicious and simple.
+6,100048,2017-02-04,5,So easy and tasty.
+6,100011,2017-12-22,5,Perfect for a weeknight.
+6,100032,2016-10-25,5,Perfect for a weeknight.
+6,100006,2017-01-13,5,"Loved this, will make again!"
+6,100040,2016-05-05,5,A new family favorite.
+6,100019,2015-06-11,3,Good base recipe to build on.
+6,100045,2015-05-22,3,Decent but nothing special.
+6,100047,2015-09-15,5,Perfect for a weeknight.
+7,100042,2017-05-16,5,Perfect for a weeknight.
+7,100030,2016-02-16,5,Perfect for a weeknight.
+7,100035,2017-02-03,5,"Great flavors, highly recommend."
+7,100010,2017-07-13,5,Perfect for a weeknight.
+7,100016,2015-05-12,4,So easy and tasty.
+8,100001,2015-05-01,3,Good base recipe to build on.
+8,100037,2016-11-07,4,"Loved this, will make again!"
+8,100035,2016-07-24,3,"It was okay, needed more seasoning."
+8,100014,2018-01-09,5,So easy and tasty.
+8,100048,2018-03-26,4,Perfect for a weeknight.
+8,100046,2017-04-13,5,"Great flavors, highly recommend."
+9,100006,2015-04-21,5,Delicious and simple.
+9,100042,2015-07-21,5,Delicious and simple.
+9,100027,2016-11-25,3,Good base recipe to build on.
+9,100022,2016-05-24,5,"Loved this, will make again!"
+9,100026,2017-07-07,4,Perfect for a weeknight.
+10,100027,2017-06-26,5,"Loved this, will make again!"
+10,100011,2015-07-20,5,Perfect for a weeknight.
+10,100017,2015-01-31,3,Good base recipe to build on.
+10,100029,2015-12-07,5,So easy and tasty.
+10,100015,2016-03-13,5,"Great flavors, highly recommend."
+11,100003,2018-02-12,4,Delicious and simple.
+11,100010,2015-11-14,5,"Great flavors, highly recommend."
+11,100024,2015-04-30,4,So easy and tasty.
+11,100000,2015-05-05,5,Perfect for a weeknight.
+11,100047,2015-04-13,5,"Loved this, will make again!"
+11,100016,2017-12-23,5,Perfect for a weeknight.
+11,100029,2015-06-14,4,Perfect for a weeknight.
+12,100004,2016-05-19,4,Perfect for a weeknight.
+12,100038,2015-06-17,5,"Loved this, will make again!"
+12,100043,2018-03-03,5,Perfect for a weeknight.
+12,100015,2016-02-23,5,A new family favorite.
+12,100025,2016-05-03,5,A new family favorite.
+13,100025,2015-01-20,4,"Loved this, will make again!"
+13,100008,2015-07-24,5,Perfect for a weeknight.
+13,100042,2017-11-02,3,"It was okay, needed more seasoning."
+13,100041,2015-05-21,4,A new family favorite.
+13,100019,2016-08-06,5,A new family favorite.
+13,100029,2016-09-11,4,Perfect for a weeknight.
+14,100041,2016-06-25,5,So easy and tasty.
+14,100033,2018-02-07,4,"Loved this, will make again!"
+14,100000,2016-03-07,4,A new family favorite.
+14,100042,2016-06-24,5,So easy and tasty.
+14,100035,2015-04-15,5,A new family favorite.
+14,100019,2016-07-20,3,Decent but nothing special.
+14,100046,2015-09-25,3,Decent but nothing special.
+14,100006,2015-11-27,5,A new family favorite.
+15,100028,2018-04-07,5,A new family favorite.
+15,100035,2015-09-19,5,"Great flavors, highly recommend."
+15,100045,2015-03-23,3,Decent but nothing special.
+15,100027,2016-05-26,5,So easy and tasty.
+15,100048,2018-02-20,5,A new family favorite.
+15,100000,2015-11-13,5,"Great flavors, highly recommend."
+15,100007,2015-11-29,5,So easy and tasty.
+15,100004,2017-04-24,5,So easy and tasty.
+15,100009,2016-11-11,3,Good base recipe to build on.
+16,100042,2017-08-21,4,"Loved this, will make again!"
+16,100047,2016-12-17,4,"Great flavors, highly recommend."
+16,100015,2016-04-01,4,So easy and tasty.
+16,100017,2017-03-27,3,"It was okay, needed more seasoning."
+16,100010,2016-07-25,4,"Loved this, will make again!"
+16,100044,2017-03-29,4,Perfect for a weeknight.
+16,100006,2016-11-09,5,Perfect for a weeknight.
+17,100007,2015-03-20,5,A new family favorite.
+17,100016,2016-12-08,4,"Great flavors, highly recommend."
+17,100011,2017-06-12,5,A new family favorite.
+17,100037,2015-08-25,5,Perfect for a weeknight.
+18,100036,2016-02-08,5,Perfect for a weeknight.
+18,100012,2016-11-07,4,"Loved this, will make again!"
+18,100016,2015-09-13,5,Delicious and simple.
+18,100002,2017-11-04,5,A new family favorite.
+18,100045,2016-10-30,4,"Great flavors, highly recommend."
+18,100027,2018-02-09,5,A new family favorite.
+18,100000,2017-02-15,4,"Great flavors, highly recommend."
+19,100047,2018-04-02,4,"Great flavors, highly recommend."
+19,100011,2017-08-10,5,A new family favorite.
+19,100039,2016-03-13,5,Delicious and simple.
+19,100036,2015-12-14,5,Delicious and simple.
+19,100019,2017-11-21,5,A new family favorite.
+19,100025,2016-11-17,5,Perfect for a weeknight.
+19,100035,2016-09-27,3,"It was okay, needed more seasoning."
+19,100000,2015-10-29,4,So easy and tasty.
+19,100045,2017-08-31,3,"It was okay, needed more seasoning."
+20,100049,2015-10-30,5,So easy and tasty.
+20,100004,2015-08-07,5,"Loved this, will make again!"
+20,100029,2015-12-27,5,So easy and tasty.
+20,100026,2017-11-26,5,Delicious and simple.
+20,100040,2016-05-25,5,Perfect for a weeknight.
+20,100036,2017-07-23,5,"Loved this, will make again!"
+20,100012,2017-12-23,4,"Great flavors, highly recommend."
+20,100024,2016-10-11,5,Perfect for a weeknight.
+21,100039,2017-07-10,5,"Great flavors, highly recommend."
+21,100046,2016-07-21,4,So easy and tasty.
+21,100032,2017-09-19,5,Perfect for a weeknight.
+21,100027,2017-06-19,5,A new family favorite.
+21,100035,2016-04-25,3,Decent but nothing special.
+21,100028,2018-01-11,4,A new family favorite.
+21,100010,2016-04-18,3,"It was okay, needed more seasoning."
+22,100044,2017-05-01,4,"Great flavors, highly recommend."
+22,100009,2017-03-08,3,Decent but nothing special.
+22,100045,2015-02-10,5,Perfect for a weeknight.
+22,100013,2017-02-18,5,Perfect for a weeknight.
+22,100004,2016-09-03,5,A new family favorite.
+22,100026,2018-01-07,5,"Great flavors, highly recommend."
+22,100049,2016-03-27,5,Perfect for a weeknight.
+23,100014,2015-12-05,5,"Great flavors, highly recommend."
+23,100017,2017-12-29,5,So easy and tasty.
+23,100027,2018-03-01,3,Decent but nothing special.
+23,100031,2017-05-27,5,"Loved this, will make again!"
+23,100001,2016-01-08,4,"Great flavors, highly recommend."
+23,100024,2016-11-01,3,Decent but nothing special.
+23,100021,2016-11-22,4,A new family favorite.
+24,100017,2016-12-17,5,"Loved this, will make again!"
+24,100048,2015-03-24,4,"Loved this, will make again!"
+24,100026,2016-02-13,5,So easy and tasty.
+24,100016,2015-11-09,5,Perfect for a weeknight.
+24,100005,2015-08-23,4,"Great flavors, highly recommend."
+24,100030,2017-08-10,5,So easy and tasty.
+24,100001,2015-12-10,5,A new family favorite.
+25,100038,2018-03-25,3,Decent but nothing special.
+25,100047,2017-03-23,5,"Great flavors, highly recommend."
+25,100045,2015-06-05,5,So easy and tasty.
+25,100007,2016-05-12,5,Delicious and simple.
+25,100010,2015-09-05,4,A new family favorite.
+25,100019,2015-03-26,5,Perfect for a weeknight.
+25,100006,2017-01-28,4,"Great flavors, highly recommend."
+25,100037,2016-11-29,3,Good base recipe to build on.
+26,100026,2017-07-30,5,Delicious and simple.
+26,100031,2015-12-27,5,"Great flavors, highly recommend."
+26,100006,2016-07-07,5,Delicious and simple.
+26,100027,2017-09-17,5,Perfect for a weeknight.
+27,100027,2016-05-14,4,"Great flavors, highly recommend."
+27,100046,2017-02-15,5,Perfect for a weeknight.
+27,100037,2016-10-27,4,"Great flavors, highly recommend."
+27,100017,2016-12-27,4,So easy and tasty.
+27,100020,2016-07-26,5,A new family favorite.
+27,100015,2016-07-19,5,Delicious and simple.
+27,100005,2016-01-27,5,Perfect for a weeknight.
+28,100015,2017-09-02,5,So easy and tasty.
+28,100046,2017-07-06,5,"Great flavors, highly recommend."
+28,100026,2016-08-25,5,"Loved this, will make again!"
+28,100031,2016-05-13,4,Delicious and simple.
+29,100042,2018-02-01,4,Delicious and simple.
+29,100037,2017-07-18,4,Delicious and simple.
+29,100023,2016-04-17,4,A new family favorite.
+29,100030,2016-10-08,4,So easy and tasty.
+29,100035,2016-01-15,4,Perfect for a weeknight.
+29,100033,2017-09-18,4,Delicious and simple.
+30,100046,2016-04-10,5,A new family favorite.
+30,100037,2015-01-29,4,A new family favorite.
+30,100033,2016-07-15,5,So easy and tasty.
+30,100038,2018-02-07,3,"It was okay, needed more seasoning."
+30,100018,2017-10-02,4,So easy and tasty.
+30,100006,2018-03-21,4,"Loved this, will make again!"
+31,100030,2015-08-22,4,"Great flavors, highly recommend."
+31,100049,2017-10-04,5,"Great flavors, highly recommend."
+31,100028,2015-04-20,3,Good base recipe to build on.
+31,100021,2016-09-14,4,Perfect for a weeknight.
+31,100011,2015-08-31,3,"It was okay, needed more seasoning."
+31,100003,2016-04-07,5,"Great flavors, highly recommend."
+32,100024,2015-07-23,5,Perfect for a weeknight.
+32,100028,2016-03-08,5,So easy and tasty.
+32,100048,2015-11-18,4,"Loved this, will make again!"
+32,100019,2015-06-03,4,Perfect for a weeknight.
+32,100037,2017-07-11,4,"Great flavors, highly recommend."
+32,100027,2016-08-19,5,"Great flavors, highly recommend."
+32,100046,2016-08-02,3,Decent but nothing special.
+32,100036,2015-05-26,5,"Great flavors, highly recommend."
+33,100014,2016-06-28,4,So easy and tasty.
+33,100016,2015-05-03,5,"Loved this, will make again!"
+33,100040,2018-03-11,4,A new family favorite.
+33,100037,2015-09-12,5,"Great flavors, highly recommend."
+33,100042,2017-04-04,5,A new family favorite.
+33,100012,2018-01-10,5,Perfect for a weeknight.
+33,100027,2015-03-23,5,"Loved this, will make again!"
+33,100007,2016-10-22,5,Delicious and simple.
+33,100034,2015-07-07,5,"Loved this, will make again!"
+34,100043,2018-03-26,5,A new family favorite.
+34,100036,2017-08-21,3,"It was okay, needed more seasoning."
+34,100037,2016-07-23,5,"Great flavors, highly recommend."
+34,100001,2017-06-11,4,Perfect for a weeknight.
+34,100048,2015-07-06,5,"Great flavors, highly recommend."
+35,100022,2017-10-11,4,Delicious and simple.
+35,100026,2018-01-31,4,"Great flavors, highly recommend."
+35,100021,2016-10-06,3,"It was okay, needed more seasoning."
+35,100020,2017-04-07,4,"Loved this, will make again!"
+35,100042,2018-01-16,5,"Loved this, will make again!"
+35,100006,2016-01-20,5,"Loved this, will make again!"
+35,100010,2017-10-17,5,Perfect for a weeknight.
+36,100028,2015-09-06,5,"Great flavors, highly recommend."
+36,100048,2016-05-05,3,Good base recipe to build on.
+36,100003,2018-02-02,5,A new family favorite.
+36,100013,2015-07-10,3,Decent but nothing special.
+36,100017,2017-08-03,4,"Loved this, will make again!"
+36,100035,2015-11-12,5,Delicious and simple.
+36,100008,2016-08-20,5,Delicious and simple.
+36,100018,2017-04-30,5,A new family favorite.
+36,100049,2016-05-14,5,"Great flavors, highly recommend."
+37,100035,2017-04-29,5,A new family favorite.
+37,100009,2016-07-01,4,Perfect for a weeknight.
+37,100024,2016-09-03,5,A new family favorite.
+37,100012,2017-09-29,5,Perfect for a weeknight.
+37,100038,2018-01-08,5,"Great flavors, highly recommend."
+37,100032,2018-02-04,5,A new family favorite.
+37,100008,2017-07-21,5,"Great flavors, highly recommend."
+38,100012,2015-03-31,5,"Great flavors, highly recommend."
+38,100044,2017-02-19,4,"Great flavors, highly recommend."
+38,100015,2015-11-08,4,Delicious and simple.
+38,100036,2015-09-16,5,"Loved this, will make again!"
+38,100024,2016-11-10,5,Perfect for a weeknight.
+38,100014,2015-07-24,5,"Great flavors, highly recommend."
+39,100029,2016-11-24,5,A new family favorite.
+39,100000,2015-06-14,5,"Great flavors, highly recommend."
+39,100046,2017-12-28,5,Delicious and simple.
+39,100009,2017-09-26,4,A new family favorite.
+39,100026,2015-05-21,5,"Loved this, will make again!"
+39,100041,2016-08-11,4,Delicious and simple.
+39,100047,2015-07-05,5,Delicious and simple.
+39,100004,2015-07-25,5,"Loved this, will make again!"
+40,100010,2017-06-01,4,A new family favorite.
+40,100044,2017-04-23,4,Perfect for a weeknight.
+40,100019,2015-12-15,5,So easy and tasty.
+40,100001,2017-02-22,4,Perfect for a weeknight.
+40,100002,2017-10-16,5,So easy and tasty.
+40,100020,2016-04-20,5,So easy and tasty.
+40,100003,2017-07-30,5,A new family favorite.

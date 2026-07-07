@@ -1,9 +1,5 @@
-from app.database.db import SessionLocal
+"""Backward-compatible re-export of the database session dependency."""
 
-def get_db():
-    db = SessionLocal()
+from app.database.db import get_db
 
-    try:
-        yield db
-    finally:
-        db.close()
+__all__ = ["get_db"]

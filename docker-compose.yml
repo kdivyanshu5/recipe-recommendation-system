@@ -1,24 +1,69 @@
-version: "3.9"
+# FlavorGraph - full stack, plug and play with `docker compose up`.
+#
+# Three services on a private network:
+#   db       -> PostgreSQL (data store)
+#   backend  -> FastAPI recommendation API (Python)
+#   frontend -> React app served by nginx, proxies /api to the backend
+#
+# Open http://localhost:8080 after startup.
 
 services:
-
   db:
-    image: postgres:16
-
-    container_name: recipe_postgres
-
-    restart: always
-
+    image: postgres:16-alpine
+    container_name: flavorgraph_db
+    restart: unless-stopped
     environment:
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: password
-      POSTGRES_DB: recipe_db
-
-    ports:
-      - "5432:5432"
-
+      POSTGRES_USER: ${DB_USER:-postgres}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-password}
+      POSTGRES_DB: ${DB_NAME:-recipe_db}
     volumes:
       - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      # Backend waits for this to pass before it starts serving.
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER:-postgres} -d ${DB_NAME:-recipe_db}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    networks:
+      - flavorgraph_net
+
+  backend:
+    build: ./backend
+    container_name: flavorgraph_backend
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      DB_HOST: db
+      DB_PORT: "5432"
+      DB_USER: ${DB_USER:-postgres}
+      DB_PASSWORD: ${DB_PASSWORD:-password}
+      DB_NAME: ${DB_NAME:-recipe_db}
+      AUTO_SEED: "true"
+      ENABLE_QUANTUM: "false"
+    volumes:
+      # Sample CSVs are mounted read-only so the backend can seed them.
+      - ./data:/data:ro
+    ports:
+      - "8000:8000"
+    networks:
+      - flavorgraph_net
+
+  frontend:
+    build: ./frontend
+    container_name: flavorgraph_frontend
+    restart: unless-stopped
+    depends_on:
+      - backend
+    ports:
+      - "8080:80"
+    networks:
+      - flavorgraph_net
 
 volumes:
   postgres_data:
+
+networks:
+  flavorgraph_net:
+    driver: bridge
