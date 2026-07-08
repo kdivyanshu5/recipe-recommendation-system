@@ -177,20 +177,9 @@ column layout. This is what makes the project plug-and-play.
   `data/interactions_sample.csv` are seeded automatically on first startup.
   They are regenerated with `python backend/scripts/generate_sample_data.py`.
 - **Full dataset (optional):** download the two RAW CSVs from Kaggle into a
-  `dataset/` folder, then run the loader (see below).
+  `data/` folder, then re-run.
 
 Load the full data into the running database:
-
-```bash
-# From the host, pointing at the Dockerised DB:
-DB_HOST=localhost pip install -r backend/requirements.txt
-DB_HOST=localhost python backend/scripts/load_full_dataset.py \
-  --recipes dataset/RAW_recipes.csv \
-  --interactions dataset/RAW_interactions.csv \
-  --limit-recipes 20000
-# Then refresh the in-memory engine without a restart:
-curl -X POST http://localhost:8000/admin/rebuild
-```
 
 More detail in [`docs/data_preparation.md`](docs/data_preparation.md) and
 [`docs/database.md`](docs/database.md).
