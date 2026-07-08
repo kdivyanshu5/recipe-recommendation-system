@@ -99,6 +99,11 @@ See [`docs/architecture.md`](docs/architecture.md) for a deeper walkthrough.
 ## Quick start
 
 Requirements: **Docker** and **Docker Compose** (Docker Desktop covers both).
+Upgrade pip also otherwise, it'll show version conflict.
+
+```bash
+python -m pip install --upgrade pip
+```
 
 ```bash
 git clone https://github.com/kdivyanshu5/recipe-recommendation-system.git
