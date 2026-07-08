@@ -21,7 +21,11 @@ Verify the install:
 docker --version
 docker compose version
 ```
-
+Open Docker Desktop -> Terminal
+Upgrade pip before proceeding to avoid version conflict:
+```bash
+python -m pip install --upgrade pip
+```
 ### 2. Get the code
 
 ```bash
