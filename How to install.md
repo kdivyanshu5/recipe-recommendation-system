@@ -91,14 +91,26 @@ data instead:
 
 1. Download `RAW_recipes.csv` and `RAW_interactions.csv` from
    [Kaggle](https://www.kaggle.com/datasets/shuyangli94/food-com-recipes-and-user-interactions).
-2. Put them in a `data/` folder at the repo root (this folder is gitignored).
-3. Rename them with "RAW_recipes.csv -> recipes_sample.csv" and "RAW_interactions.csv -> interactions_sample.csv".
-4. Remove container and re-run :
+2. Put them in a `dataset/` folder at the repo root (this folder is gitignored).
+3. With the stack running, load the data into the database:
+
 ```bash
-docker compose up --build
+pip install -r backend/requirements.txt
+DB_HOST=localhost python backend/scripts/load_full_dataset.py \
+  --recipes dataset/RAW_recipes.csv \
+  --interactions dataset/RAW_interactions.csv \
+  --limit-recipes 20000
 ```
 
+4. Refresh the recommender without restarting:
 
+```bash
+curl -X POST http://localhost:8000/admin/rebuild
+```
+
+`--limit-recipes` keeps the import manageable; remove it to load everything.
+
+---
 
 ## Enabling the optional quantum demo
 
