@@ -14,7 +14,7 @@ RUN apt-get update \
 
 # Install dependencies first so Docker can cache this layer.
 COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir --timeout 120 --retries 10 -r requirements.txt
 
 # Copy the application code.
 COPY . .
