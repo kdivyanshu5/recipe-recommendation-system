@@ -60,6 +60,12 @@ The backend is a normal REST API. Explore it interactively at
 
 Base URL: `http://localhost:8000` (or `/api` through the frontend proxy).
 
+> **Windows note:** run these in the VS Code terminal. The `curl` examples below
+> are for Mac/Linux — in Windows PowerShell, `curl` is an alias for a different
+> command, so use `Invoke-RestMethod` instead (PowerShell versions shown after
+> each example), or just use the Swagger page at
+> <http://localhost:8000/docs>, which needs no commands at all.
+
 ### Recommend by preferences (main endpoint)
 
 ```bash
@@ -73,6 +79,12 @@ curl -X POST http://localhost:8000/recommend/ \
         "min_rating": 3.5,
         "limit": 5
       }'
+```
+
+Windows (PowerShell):
+
+```powershell
+Invoke-RestMethod -Method Post -Uri http://localhost:8000/recommend/ -ContentType "application/json" -Body '{"ingredients":["chicken","garlic"],"tags":["dinner"],"exclude_ingredients":["peanuts"],"max_minutes":60,"min_rating":3.5,"limit":5}'
 ```
 
 Response (shortened):
@@ -117,6 +129,14 @@ curl http://localhost:8000/recommend/similar/100000?limit=6
 
 # Search by name
 curl "http://localhost:8000/recipes/search?q=soup"
+```
+
+Windows (PowerShell):
+
+```powershell
+Invoke-RestMethod http://localhost:8000/recommend/popular?limit=8
+Invoke-RestMethod http://localhost:8000/recommend/similar/100000?limit=6
+Invoke-RestMethod "http://localhost:8000/recipes/search?q=soup"
 ```
 
 ---

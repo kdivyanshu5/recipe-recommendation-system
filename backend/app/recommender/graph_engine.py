@@ -33,10 +33,18 @@ class IngredientGraph:
                 key = ingredient.lower().strip()
                 ingredient_to_recipes.setdefault(key, []).append(recipe.id)
 
+        # Skip ingredients used by a huge number of recipes (salt, water,
+        # onion...). They carry no similarity signal, and pairing up every
+        # recipe that shares them makes the edge count explode on big datasets.
+        max_uses = 50
+
         # Count how many ingredients each pair of recipes has in common.
         shared_counts: Dict[tuple, int] = {}
         for recipe_ids in ingredient_to_recipes.values():
-            for first, second in combinations(sorted(set(recipe_ids)), 2):
+            unique_ids = sorted(set(recipe_ids))
+            if len(unique_ids) > max_uses:
+                continue
+            for first, second in combinations(unique_ids, 2):
                 shared_counts[(first, second)] = shared_counts.get((first, second), 0) + 1
 
         for (first, second), count in shared_counts.items():

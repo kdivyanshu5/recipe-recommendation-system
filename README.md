@@ -169,27 +169,44 @@ Full request/response details are in [`docs/api.md`](docs/api.md).
 **Source (declared):** [Food.com Recipes and User Interactions](https://www.kaggle.com/datasets/shuyangli94/food-com-recipes-and-user-interactions)
 (`RAW_recipes.csv`, `RAW_interactions.csv`).
 
-Because the full dataset is ~900 MB and slow to import, the repository ships a
-small, deterministic **sample** in [`data/`](data/) that keeps the exact same
-column layout. This is what makes the project plug-and-play.
+The full dataset is close to 900 MB, which is far too heavy to import on every
+startup. So the project works with two levels of data:
 
-- **Sample (default):** `data/recipes_sample.csv` and
-  `data/interactions_sample.csv` are seeded automatically on first startup.
-  They are regenerated with `python backend/scripts/generate_sample_data.py`.
-- **Full dataset (optional):** download the two RAW CSVs from Kaggle into a
-  `dataset/` folder, then run the loader (see below).
+- **Default — the bundled sample.** A small set of 50 recipes with ratings lives
+  in [`data/`](data/), in the same column layout as the real files. The backend
+  seeds it automatically on first startup (`AUTO_SEED: "true"` in
+  `docker-compose.yml`, on by default), so the app works the moment the
+  containers are up. Regenerate it anytime with
+  `python backend/scripts/generate_sample_data.py`.
+- **Secondary — the full dataset.** If you want the real data, download the two
+  RAW CSVs from Kaggle into a `dataset/` folder and run the loader script. This
+  is entirely optional.
 
-Load the full data into the running database:
+The full import needs a couple of one-time settings first (publish db port
+`5432:5432`, temporarily set `AUTO_SEED: "false"`, start from a clean database) —
+the whole walkthrough is in **How to install.md → Part 2**. All commands run in
+the VS Code terminal. The short version:
+
+Windows (PowerShell):
+
+```powershell
+pip install -r backend/requirements.txt
+$env:DB_HOST = "localhost"
+python backend/scripts/load_full_dataset.py --recipes dataset/RAW_recipes.csv --interactions dataset/RAW_interactions.csv --limit-recipes 20000
+# Then refresh the in-memory engine (first build takes a minute or two):
+Invoke-RestMethod -Method Post -Uri http://localhost:8000/admin/rebuild -TimeoutSec 600
+```
+
+Mac/Linux:
 
 ```bash
-# From the host, pointing at the Dockerised DB:
-DB_HOST=localhost pip install -r backend/requirements.txt
+pip install -r backend/requirements.txt
 DB_HOST=localhost python backend/scripts/load_full_dataset.py \
   --recipes dataset/RAW_recipes.csv \
   --interactions dataset/RAW_interactions.csv \
   --limit-recipes 20000
 # Then refresh the in-memory engine without a restart:
-curl -X POST http://localhost:8000/admin/rebuild
+curl -X POST --max-time 600 http://localhost:8000/admin/rebuild
 ```
 
 More detail in [`docs/data_preparation.md`](docs/data_preparation.md) and
@@ -218,12 +235,28 @@ engine is fitted once and cached in memory (rebuild with `/admin/rebuild`).
 Disabled by default. It frames "pick a diverse short-list from the top
 candidates" as a small QUBO and solves it with **QAOA** (Qiskit).
 
+To enable it (full steps in **How to install.md → Part 3**):
+
+1. In `backend/Dockerfile`, add after the `COPY . .` line (the packages must be
+   installed *inside* the container, not on your PC):
+
+```dockerfile
+RUN pip install --no-cache-dir -r requirements-quantum.txt
+```
+
+2. In `docker-compose.yml`, under `backend:` → `environment:`, set
+   `ENABLE_QUANTUM: "true"`.
+3. Rebuild in the VS Code terminal: `docker compose up --build -d`.
+
+Then call it — Windows (PowerShell):
+
+```powershell
+Invoke-RestMethod -Method Post -Uri http://localhost:8000/recommend/quantum -ContentType "application/json" -Body '{"tags":["dinner"],"limit":4}'
+```
+
+Mac/Linux:
+
 ```bash
-# 1. install the extra dependencies
-pip install -r backend/requirements-quantum.txt
-# 2. enable it and restart
-ENABLE_QUANTUM=true docker compose up --build
-# 3. call it
 curl -X POST http://localhost:8000/recommend/quantum \
   -H "Content-Type: application/json" -d '{"tags":["dinner"],"limit":4}'
 ```
