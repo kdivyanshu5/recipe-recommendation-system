@@ -98,6 +98,7 @@ See [`docs/architecture.md`](docs/architecture.md) for a deeper walkthrough.
 
 ## Quick start
 
+**Screenshot Guide:** [Screenshot_Guide.pdf](Screenshot_Guide.pdf)
 Requirements: **Docker** and **Docker Compose** (Docker Desktop covers both).
 Open Docker Desktop -> Terminal
 Upgrade pip before proceeding to avoid version conflict:
